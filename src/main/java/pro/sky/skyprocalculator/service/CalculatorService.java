@@ -14,7 +14,7 @@ public interface CalculatorService {
 
     double divisionOfArguments(double num1, double num2);
 
-   void checkArithmeticException(double num2);
+   void checkArgument(double num2);
 
     void checkArgument(Object... args);
 

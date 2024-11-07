@@ -54,7 +54,7 @@ public class CalculatorController {
     public String division(@RequestParam(value = "num1", required = false) Double num1,
                            @RequestParam(value = "num2", required = false) Double num2) {
         calculatorService.checkArgument(num1, num2);
-        calculatorService.checkArithmeticException(num2);
+        calculatorService.checkArgument(num2);
         return String.format("%.2f / %.2f = %.2f", num1, num2, calculatorService.divisionOfArguments(num1, num2));
     }
 
