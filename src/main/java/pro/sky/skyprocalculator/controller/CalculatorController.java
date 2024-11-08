@@ -31,14 +31,15 @@ public class CalculatorController {
     public String sum(@RequestParam(value = "num1", required = false) Integer num1,
                       @RequestParam(value = "num2", required = false) Integer num2) {
         calculatorService.checkArgument(num1, num2);
-        return String.format("%d + %d = %d", num1, num2, calculatorService.sumUpTheArguments(num1, num2));
+        return calculatorService.sumUpTheArguments(num1, num2);
+
     }
 
     @GetMapping(path = "/minus")
     public String subtract(@RequestParam(value = "num1", required = false) Integer num1,
                            @RequestParam(value = "num2", required = false) Integer num2) {
         calculatorService.checkArgument(num1, num2);
-        return String.format("%d - %d = %d", num1, num2, calculatorService.subtractArgument(num1, num2));
+        return  calculatorService.subtractArgument(num1, num2);
 
     }
 
@@ -46,7 +47,7 @@ public class CalculatorController {
     public String multiplication(@RequestParam(value = "num1", required = false) Integer num1,
                                  @RequestParam(value = "num2", required = false) Integer num2) {
         calculatorService.checkArgument(num1, num2);
-        return String.format("%d * %d = %d", num1, num2, calculatorService.multiplicationOfArgument(num1, num2));
+        return  calculatorService.multiplicationOfArgument(num1, num2);
 
     }
 
@@ -55,7 +56,7 @@ public class CalculatorController {
                            @RequestParam(value = "num2", required = false) Double num2) {
         calculatorService.checkArgument(num1, num2);
         calculatorService.checkArgument(num2);
-        return String.format("%.2f / %.2f = %.2f", num1, num2, calculatorService.divisionOfArguments(num1, num2));
+        return calculatorService.divisionOfArguments(num1, num2);
     }
 
 }

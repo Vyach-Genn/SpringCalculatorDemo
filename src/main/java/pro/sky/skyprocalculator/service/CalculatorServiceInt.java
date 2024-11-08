@@ -13,22 +13,22 @@ public class CalculatorServiceInt implements CalculatorService {
         return "Добро пожаловать в калькулятор ";
     }
 
-    public int sumUpTheArguments(int num1, int num2){
-        return num1 + num2;
+    public String sumUpTheArguments(int num1, int num2){
+        return String.format("%d + %d = %d", num1, num2, num1 + num2);
     }
 
-    public int subtractArgument(int num1, int num2){
-        return num1 - num2;
-
-    }
-
-    public int multiplicationOfArgument(int num1, int num2){
-        return num1 * num2;
+    public String subtractArgument(int num1, int num2){
+        return String.format("%d - %d = %d", num1, num2, num1 - num2);
 
     }
 
-    public double divisionOfArguments(double num1, double num2){
-        return num1 / num2;
+    public String multiplicationOfArgument(int num1, int num2){
+        return String.format("%d * %d = %d", num1, num2, num1 * num2);
+
+    }
+
+    public String divisionOfArguments(double num1, double num2){
+        return String.format("%.2f / %.2f = %.2f", num1, num2, num1 / num2);
     }
 
     public void checkArgument(double num2){

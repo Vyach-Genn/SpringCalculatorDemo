@@ -6,13 +6,13 @@ public interface CalculatorService {
 
     String answerHello();
 
-    int sumUpTheArguments(int num1, int num2);
+    String sumUpTheArguments(int num1, int num2);
 
-    int subtractArgument(int num1, int num2);
+    String subtractArgument(int num1, int num2);
 
-    int multiplicationOfArgument(int num1, int num2);
+    String multiplicationOfArgument(int num1, int num2);
 
-    double divisionOfArguments(double num1, double num2);
+    String divisionOfArguments(double num1, double num2);
 
    void checkArgument(double num2);
 
